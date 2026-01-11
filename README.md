@@ -1,4 +1,4 @@
-# Relay-Bot:
+# RelayBot
 
 ## 1. 프로젝트 개요
 
@@ -25,11 +25,11 @@
 
 ---
 ## 3. 주요 기능 
-### 1. BATMAN-adv 기반 Mesh Network 
-**Layer-2 라우팅:** IP 충돌 없이 MAC 주소 기반으로 동작하여 기지국 범위가 바뀌어도 동일 IP 사용 가능
-**TQ (Transmission Quality) 지표 활용:** 단순 신호 세기(RSSI)가 아닌 실제 패킷 전송 성공률을 기반으로 경로를 설정하여 신뢰성 확보
+### 1. BATMAN-adv  Mesh Network 
+- Layer-2 라우팅:** IP 충돌 없이 MAC 주소 기반으로 동작하여 기지국 범위가 바뀌어도 동일 IP 사용 가능
+- TQ (Transmission Quality) 지표 활용:** 단순 신호 세기(RSSI)가 아닌 실제 패킷 전송 성공률을 기반으로 경로를 설정하여 신뢰성 확보
 
-**Self-Healing:** 특정 노드와의 연결이 끊겨도 자동으로 다른 경로를 탐색하여 네트워크를 복구
+- Self-Healing:** 특정 노드와의 연결이 끊겨도 자동으로 다른 경로를 탐색하여 네트워크를 복구
 
 
 
@@ -37,10 +37,10 @@
 
 ![터틀봇](https://github.com/user-attachments/assets/cf74ff0e-0709-4199-8b8f-48d087297d18)
 
-RelayBoT이 실시간으로 통신 감도를 분석하고, 신호가 가장 강한 위치를 스스로 판단하여 이동
-사전 지도(Map)이 없는 낯선 환경에서도 오직 신호 세기만을 감지하여 중계 거점 확보
+- RelayBoT이 실시간으로 통신 감도를 분석하고, 신호가 가장 강한 위치를 스스로 판단하여 이동
+- 지도(Map)이 없는 낯선 환경에서도 오직 신호 세기만을 감지하여 중계 거점 확보
 
-지도 없는(Map-less) 자율 주행: SLAM을 이용한 복잡한 지도 생성 없이, 오직 통신 신호의 품질(TQ) 변화량(Gradient)만을 계산하여 이동
+*지도 없는(Map-less) 자율 주행: SLAM을 이용한 복잡한 지도 생성 없이, 오직 통신 신호의 품질(TQ) 변화량(Gradient)만을 계산하여 이동
 - **신호 추적 로직:**
     - `Signal ↑ (Good)`: 신호가 좋아지는 방향으로 계속 이동 (Keep Moving)
     - `Signal ↓ (Bad)`: 신호가 나빠지면 방향 전환 (Random Move/Probe)
